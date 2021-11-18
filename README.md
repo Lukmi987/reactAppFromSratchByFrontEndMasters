@@ -32,3 +32,20 @@ It is a bundler for JavaScript much easier than Webpack
 =--------------------
 Other Cools Plugins:
 Browswrify, esbuild, Snowpack, Vite and rollup.js
+
+---
+
+Babel
+It is transpile tool
+It takes code that looks one way and it makes it look a different way
+Transpilation is a set of source code and making it a different source code
+
+configuration "runtime" : "automatic" // This allows us to do the most recent version of JSX;
+
+## npm i -D @babel/core@7.12.16 @babel/preset-react@7.12.13
+
+In dist folder:
+\*js.map should not ship to production, In chrome web tools to see real source code not the generated one that what these files are doing for us
+
+=======================================
+browserslist.dev to see how many people are using wha kind of browser and its version
