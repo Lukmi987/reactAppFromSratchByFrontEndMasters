@@ -23,3 +23,12 @@ write: prettier config: Prettier: Require Config it only will run for projects w
 
 Eslint
 npm i -D eslint@7.18.0 eslint-config-prettier@8.1.0
+
+---
+
+Parcel
+It is a bundler for JavaScript much easier than Webpack
+
+=--------------------
+Other Cools Plugins:
+Browswrify, esbuild, Snowpack, Vite and rollup.js
