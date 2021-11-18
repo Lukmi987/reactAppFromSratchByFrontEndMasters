@@ -1,0 +1,22 @@
+{
+  "name": "reactappfromsratchbyfrontendmasters",
+  "version": "1.0.0",
+  "description": "// Every time that you create a new tag or you are creating     // a new instance of the component, you have to use React.createElement",
+  "main": "index.js",
+  "scripts": {
+"format": "prettier --write \"src/**/*.{js,jsx}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lukmi987/reactAppFromSratchByFrontEndMasters.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lukmi987/reactAppFromSratchByFrontEndMasters/issues"
+  },
+  "homepage": "https://github.com/Lukmi987/reactAppFromSratchByFrontEndMasters#readme",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  }
+}
