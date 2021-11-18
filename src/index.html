@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt Me</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">not rendered</div>
+    <!-- It allows to link npm packeges from the browser, load react package into our browser 
+     We need 2 packeges for React to render
+     - React is like the high level API all react works relatively the same way
+     - react DOM is the underlying line library that interacts with the DOM
+    -->
+    <script src="https://unpkg.com/react@17.0.1/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17.0.1/umd/react-dom.development.js"></script>
+<script>
+
+// App is Basically a   rubber stamp(razitko)  , created an ability to stamp something out
+const App = () => {
+    console.log('create element',React.createElement(
+        "div",
+        {},
+        React.createElement("h1", {}, "Adopt Me!!")
+    ));
+    // createElement stamps div and inside stamps h1
+    return React.createElement(
+        "div",
+        {},
+        React.createElement("h1", {}, "Adopt Me!!")
+    )
+};
+
+// here create element is creating an instance of your component
+// once you start using jsx createElement is hidden from you
+// jsx is getting transpiled into createElement calls
+console.log('2',ReactDOM.render(React.createElement(App), document.getElementById('root')));
+ReactDOM.render(React.createElement(App), document.getElementById('root'));
+</script>
+</body>
+</html>
