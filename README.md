@@ -52,3 +52,9 @@ browserslist.dev to see how many people are using wha kind of browser and its ve
 
 ========================================
 Warning: You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.
+========================================================================
+
+Hooks Rules
+
+- they need to be called in the same order,
+- never put them inside if condititions
