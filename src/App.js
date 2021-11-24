@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Pet from "./Pet";
+import SearchParams from "./SearchParams";
 
 // const App = () => {
 //   console.log('v app js');
@@ -28,6 +29,7 @@ const App = () => {
   console.log("v app js");
   return (
     <div>
+      <SearchParams />
       <Pet name="Luna" animal="mars" breed="Hav" />
       <Pet name="JT" animal="dog" breed="Cockta" />
       <Pet name="FK" animal="bird" breed="Tree" />

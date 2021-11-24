@@ -49,3 +49,6 @@ In dist folder:
 
 =======================================
 browserslist.dev to see how many people are using wha kind of browser and its version
+
+========================================
+Warning: You provided a `value` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultValue`. Otherwise, set either `onChange` or `readOnly`.
