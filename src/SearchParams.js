@@ -5,7 +5,7 @@ import { useState } from 'react';
 // Now When i write a key to input a react is gonna kick rerender cycle, the component will rerender with the same state
 // With the location prop
 const SearchParams = () => {
-const [location, setLocation] = useState('');
+const [location, setLocation] = useState('Seattle,WA');
 
     return (
         <div className="search-params">
