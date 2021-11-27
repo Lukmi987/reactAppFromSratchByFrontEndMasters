@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { StrictMode } from "react";
 import Pet from "./Pet";
 import SearchParams from "./SearchParams";
+
 
 // const App = () => {
 //   console.log('v app js');
@@ -37,4 +39,4 @@ const App = () => {
   );
 };
 
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render(<StrictMode><App /></StrictMode>, document.getElementById("root"));

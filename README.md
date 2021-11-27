@@ -1,3 +1,5 @@
+Higher Order Component: itself doesn't do anything, but it offers functionality to its children components
+
 # reactAppFromSratchByFrontEndMasters
 
     // Every time that you create a new tag or you are creating
@@ -67,4 +69,24 @@ NODE_ENV=development
 
 Parcel does it automatically : run dev set it to development, Webpack we have to set manually
 
-So how do you get the debugging conveniences then? Well, if you're using Parcel.js, it will compile your development server with an environment variable of NODE_ENV=development and then when you run parcel build <entry point> it will automatically change that to NODE_ENV=production(becomes 4times smaller) which is how all the extra weight gets stripped out.
+# So how do you get the debugging conveniences then? Well, if you're using Parcel.js, it will compile your development server with an environment variable of NODE_ENV=development and then when you run parcel build <entry point> it will automatically change that to NODE_ENV=production(becomes 4times smaller) which is how all the extra weight gets stripped out.
+
+============================================
+Strict Mode
+
+It does not make your bundle size bigger, it gets stripped in production build
+
+React has a new strict mode. If you wrap your app in <React.StrictMode></React.StrictMode> it will give you additional warnings about things you shouldn't be doing. I'm not teaching you anything that would trip warnings from React.StrictMode but it's good to keep your team in line and not using legacy features or things that will be soon be deprecated.
+
+// import at top
+import { StrictMode } from "react";
+
+// replace render
+render(
+<StrictMode>
+<App />
+</StrictMode>,
+document.getElementById("root")
+);
+
+========================================
