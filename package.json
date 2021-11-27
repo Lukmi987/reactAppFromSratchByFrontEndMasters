@@ -4,7 +4,7 @@
   "description": "// Every time that you create a new tag or you are creating     // a new instance of the component, you have to use React.createElement",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "NODE_ENV=development parcel src/index.html",
     "format": "prettier --write \"src/**/*.{js,jsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx}\" --quiet"
   },

@@ -57,4 +57,14 @@ Warning: You provided a `value` prop to a form field without an `onChange` handl
 Hooks Rules
 
 - they need to be called in the same order,
-- never put them inside if condititions
+- # never put them inside if condititions
+
+=========================================
+
+React Dev Tools,
+if we are doing production bundling in your computer , you do need to make sure that you are setting that before you do it
+NODE_ENV=development
+
+Parcel does it automatically : run dev set it to development, Webpack we have to set manually
+
+So how do you get the debugging conveniences then? Well, if you're using Parcel.js, it will compile your development server with an environment variable of NODE_ENV=development and then when you run parcel build <entry point> it will automatically change that to NODE_ENV=production(becomes 4times smaller) which is how all the extra weight gets stripped out.
