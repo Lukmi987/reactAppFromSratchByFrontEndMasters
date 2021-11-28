@@ -7,28 +7,6 @@ import SearchParams from "./SearchParams";
 import Details from "./Details";
 import ThemeContext from "./ThemeContext";
 
-// const App = () => {
-//   console.log('v app js');
-//   return React.createElement("div", {},[
-//     React.createElement("h1", {}, "Adopt Me!!"),
-//     React.createElement(Pet, {
-//       name: "Luna",
-//       animal: "dog",
-//       breed: "havaniis",
-//     }),
-//     React.createElement(Pet, {
-//       name: "Peeper",
-//       animal: "Bird",
-//       breed: "havaniis",
-//     }),
-//     React.createElement(Pet, {
-//       name: "Sudo",
-//       animal: "Crodile",
-//       breed: "havaniis",
-//     }),
-//   ]);
-// }
-
 const App = () => {
   const themeHook = useState("darkblue");
 
