@@ -98,3 +98,6 @@ On the Details page, notice that both pages render. It has to do with how React 
 
 React Router will render all components that the path match.
 React Router does partial matches. The URL /teachers/jem/young will match the paths /, /teachers, /teachers/jem and /teachers/jem/young. It will not match /young, /jem/young, or /teachers/young.
+=================================
+Link
+Didn't the <a> work? It did but with a flaw: every link you clicked would end up in the browser navigating to a whole new page which means React would totally reload your entire app all over again. With <Link> it can intercept this and just handle that all client-side. Much faster and a better user experience.
