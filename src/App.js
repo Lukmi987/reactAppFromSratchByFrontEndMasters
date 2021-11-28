@@ -33,11 +33,11 @@ const App = () => {
   return (
     <div>
       <Router>
-      <header>
-      <Link to="/">
-        <h1>Adopt me!!</h1>
-      </Link>
-      </header>
+        <header>
+          <Link to="/">
+            <h1>Adopt me!!</h1>
+          </Link>
+        </header>
         {/* Switch solves the problem with displaying more components which match the route even partialy */}
         <Switch>
           <Route path="/details/:id">
@@ -48,7 +48,7 @@ const App = () => {
           </Route>
         </Switch>
 
-        <Pet name="Luna" animal="mars" breed="Hav" id={1} /> 
+        <Pet name="Luna" animal="mars" breed="Hav" id={1} />
       </Router>
     </div>
   );

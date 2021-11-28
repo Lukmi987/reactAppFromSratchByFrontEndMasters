@@ -105,6 +105,10 @@ Didn't the <a> work? It did but with a flaw: every link you clicked would end up
 useEffect hook
 cleanUp functions not so often used, but good for timers, subscription, log out ..., these clean up are goint run when the component umounts from DOM,
 So when we change component
+
+Custom Hook
+of course it runs every time component rerenders, but same rule as for any component, manage state in useState and useEffect and dependancy
+
 ===========================
 Error about regenerator runtime: put to package json
 "browserslist": [

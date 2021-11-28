@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 // const Pet = (props) => {
 //     return React.createElement("div", {}, [
 //       React.createElement("h2", {}, props.name),
@@ -15,13 +15,13 @@ import { Link } from 'react-router-dom';
 // we have babel, parcel and so on to transpile it and output result above
 const Pet = ({ name, animal, breed, id }) => {
   return (
-   <Link to={`/details/${id}`} className="pet">
-   <div>
-      <div className="info">
-        <h1>{name}</h1>
-        <h2>{`${animal} - ${breed}`}</h2>
+    <Link to={`/details/${id}`} className="pet">
+      <div>
+        <div className="info">
+          <h1>{name}</h1>
+          <h2>{`${animal} - ${breed}`}</h2>
+        </div>
       </div>
-    </div>
     </Link>
   );
 };

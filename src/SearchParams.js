@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import Pet from './Pet';
+import Pet from "./Pet";
+import useBreedList from "./useBreedList";
 
 //Warning: You provided a `value` prop to a form field without an `onChange` handler.
 // Keep in Mind How React Works: Every time React detects a change anywhere, it reruns its render cycle
@@ -14,25 +15,23 @@ const SearchParams = () => {
   const [animal, setAnimal] = useState("dog");
   const [breed, setBreed] = useState("");
   const [pets, setPets] = useState([]);
-  const breeds = [];
+  const [breedList, status] = useBreedList(animal);
 
-useEffect(() => {
-    console.log('useEffect runs agian');
+  useEffect(() => {
+    console.log("useEffect runs agian");
     requestPets();
-},[]) // eslint-disable-line react-hooks/exhaustive-deps
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-
-
-//creating inside of the render, coz now we have a closure where I can access all useStates
-async function requestPets() {
+  //creating inside of the render, coz now we have a closure where I can access all useStates
+  async function requestPets() {
     const res = await fetch(
-        `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
-      );
-   const json = await res.json();
-   const {pets} = json;
-   setPets(pets)
-}
-console.log('pets are',pets);
+      `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+    );
+    const json = await res.json();
+    const { pets } = json;
+    setPets(pets);
+  }
+  console.log("pets are", pets);
 
   return (
     <div className="search-params">
@@ -74,7 +73,7 @@ console.log('pets are',pets);
             onBlur={(e) => setBreed(e.target.value)}
           >
             <option />
-            {breeds.map((breed) => {
+            {breedList.map((breed) => {
               return (
                 <option value={breed} key={breed}>
                   {breed}{" "}
@@ -85,11 +84,15 @@ console.log('pets are',pets);
         </label>
         <button>Submit</button>
       </form>
-      {
-          pets.map( pet => (
-              <Pet key={pet.id} name={pet.name} animal={pet.animal} breed={pet.breed} id={pet.id} />
-          ))
-      }
+      {pets.map((pet) => (
+        <Pet
+          key={pet.id}
+          name={pet.name}
+          animal={pet.animal}
+          breed={pet.breed}
+          id={pet.id}
+        />
+      ))}
     </div>
   );
 };
