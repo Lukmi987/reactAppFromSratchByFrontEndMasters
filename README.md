@@ -114,3 +114,21 @@ Error about regenerator runtime: put to package json
 "browserslist": [
 "last 2 Chrome versions"
 ]
+===================
+onCutCapture it will capture ctr + x event
+
+=========================
+VS code Tips
+
+<div>
+        {pets.map((pet) => (
+            <Pet
+                key={pet.id}
+                name={pet.name}
+                animal={pet.animal}
+                breed={pet.breed}
+                id={pet.id} />
+        ))}
+    </div>;
+
+    select it whole and vs code shows yellow bubble right click on it and export it to module

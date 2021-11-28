@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
-import Pet from "./Pet";
 import useBreedList from "./useBreedList";
+import Results from "./Results";
 
 //Warning: You provided a `value` prop to a form field without an `onChange` handler.
 // Keep in Mind How React Works: Every time React detects a change anywhere, it reruns its render cycle
@@ -35,7 +35,14 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form>
+      <form
+        onSubmit={(e) => {
+          //prevent from submitting otherwise it will refresh the page
+          console.log("calling on submit");
+          e.preventDefault();
+          requestPets();
+        }}
+      >
         <label htmlFor="location">
           location
           <input
@@ -84,15 +91,8 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
-      {pets.map((pet) => (
-        <Pet
-          key={pet.id}
-          name={pet.name}
-          animal={pet.animal}
-          breed={pet.breed}
-          id={pet.id}
-        />
-      ))}
+
+      <Results pets={pets} />
     </div>
   );
 };
