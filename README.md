@@ -132,3 +132,7 @@ VS code Tips
     </div>;
 
     select it whole and vs code shows yellow bubble right click on it and export it to module
+
+====================================================
+Context
+It is like a wormhole whatever you put on one side you are getting on other side, no prop drilling big adventage
