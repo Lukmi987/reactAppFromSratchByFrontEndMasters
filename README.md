@@ -101,3 +101,12 @@ React Router does partial matches. The URL /teachers/jem/young will match the pa
 =================================
 Link
 Didn't the <a> work? It did but with a flaw: every link you clicked would end up in the browser navigating to a whole new page which means React would totally reload your entire app all over again. With <Link> it can intercept this and just handle that all client-side. Much faster and a better user experience.
+========================================================
+useEffect hook
+cleanUp functions not so often used, but good for timers, subscription, log out ..., these clean up are goint run when the component umounts from DOM,
+So when we change component
+===========================
+Error about regenerator runtime: put to package json
+"browserslist": [
+"last 2 Chrome versions"
+]

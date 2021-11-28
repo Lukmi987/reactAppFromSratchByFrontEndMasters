@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import Pet from './Pet';
 
 //Warning: You provided a `value` prop to a form field without an `onChange` handler.
 // Keep in Mind How React Works: Every time React detects a change anywhere, it reruns its render cycle
@@ -12,8 +13,26 @@ const SearchParams = () => {
   const [location, setLocation] = useState("Seattle,WA");
   const [animal, setAnimal] = useState("dog");
   const [breed, setBreed] = useState("");
-
+  const [pets, setPets] = useState([]);
   const breeds = [];
+
+useEffect(() => {
+    console.log('useEffect runs agian');
+    requestPets();
+},[]) // eslint-disable-line react-hooks/exhaustive-deps
+
+
+
+//creating inside of the render, coz now we have a closure where I can access all useStates
+async function requestPets() {
+    const res = await fetch(
+        `http://pets-v2.dev-apis.com/pets?animal=${animal}&location=${location}&breed=${breed}`
+      );
+   const json = await res.json();
+   const {pets} = json;
+   setPets(pets)
+}
+console.log('pets are',pets);
 
   return (
     <div className="search-params">
@@ -66,6 +85,11 @@ const SearchParams = () => {
         </label>
         <button>Submit</button>
       </form>
+      {
+          pets.map( pet => (
+              <Pet key={pet.id} name={pet.name} animal={pet.animal} breed={pet.breed} id={pet.id} />
+          ))
+      }
     </div>
   );
 };
