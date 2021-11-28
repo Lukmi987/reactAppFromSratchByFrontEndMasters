@@ -1,9 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { StrictMode } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Pet from "./Pet";
 import SearchParams from "./SearchParams";
-
+import Details from "./Details";
 
 // const App = () => {
 //   console.log('v app js');
@@ -31,12 +32,26 @@ const App = () => {
   console.log("v app js");
   return (
     <div>
-      <SearchParams />
-      <Pet name="Luna" animal="mars" breed="Hav" />
-      <Pet name="JT" animal="dog" breed="Cockta" />
-      <Pet name="FK" animal="bird" breed="Tree" />
+      <Router>
+        {/* Switch solves the problem with displaying more components which match the route even partialy */}
+        <Switch>
+          <Route path="/details/:id">
+            <Details />
+          </Route>
+          <Route path="/">
+            <SearchParams />
+          </Route>
+        </Switch>
+
+        {/* <Pet name="Luna" animal="mars" breed="Hav" />  */}
+      </Router>
     </div>
   );
 };
 
-ReactDOM.render(<StrictMode><App /></StrictMode>, document.getElementById("root"));
+ReactDOM.render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+  document.getElementById("root")
+);

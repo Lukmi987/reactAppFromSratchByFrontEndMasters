@@ -90,3 +90,11 @@ document.getElementById("root")
 );
 
 ========================================
+React Router
+npm install react-router-dom@5.2.0
+
+-dom is the windows version, they also have a react native version
+On the Details page, notice that both pages render. It has to do with how React Router does routes.
+
+React Router will render all components that the path match.
+React Router does partial matches. The URL /teachers/jem/young will match the paths /, /teachers, /teachers/jem and /teachers/jem/young. It will not match /young, /jem/young, or /teachers/young.
