@@ -15,6 +15,7 @@ NPM
 
 ---
 Prettier:
+
 1.npm i -D prettier
 2. Create in root directory .prettierrc // configuration for prettier
  - default is empty object so just put {}
@@ -31,6 +32,28 @@ write: prettier config: Prettier: Require Config it only will run for projects w
 Eslint
 1.npm install -D eslint@7.18.0 eslint-config-prettier@8.1.0
 2. in src create a file .eslintrc.json next .prettierrc
+
+Into config: // everyting we need to start with eslint
+{
+    "extends": [
+        "eslint:recommended",
+        "prettier"
+        ],
+        "parseOptions": {
+        "ecmaVersion": 2021,
+        "sourceType: "module",
+        "ecmaFeatures" {"jsx": true},
+            }
+        },
+        "env": {
+        "es6": true,
+        "browser": true,
+        "node": true
+        }
+       }
+       
+       3. in package json to script: "lint": "eslint \"src/**/*.{js,jsx}\" --quiet" //quiet do not see all of it , just important
+       
 
 ---
 
