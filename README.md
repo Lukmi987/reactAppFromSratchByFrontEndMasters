@@ -14,17 +14,23 @@ NPM
 ---
 
 ---
+Prettier:
+1.npm i -D prettier
+2. Create in root directory .prettierrc // configuration for prettier
+ - default is empty object so just put {}
+3. Then in package.json in scripts "format": "prettier --write \"src/**/*.{js,jsx}\"" specific files
+
 
 Plugins VS Code
 ctrl + , :settings in Vs code then
 write: prettier config: Prettier: Require Config it only will run for projects where is config
 
 - prettier on save also enable
-
 ---
 
 Eslint
-npm i -D eslint@7.18.0 eslint-config-prettier@8.1.0
+1.npm install -D eslint@7.18.0 eslint-config-prettier@8.1.0
+2. in src create a file .eslintrc.json next .prettierrc
 
 ---
 
